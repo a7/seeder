@@ -1,0 +1,8 @@
+{
+	"name": "aaronholbrook/seeder",
+	"description": "Perform heavy and/or infrequent actions in a controlled manner",
+	"type": "wordpress-plugin",
+	"autoload": {
+		"files": ["seeder.php"]
+	}
+}
