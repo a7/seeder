@@ -8,7 +8,7 @@ Initialize seeding by clicking the **Do Seed** button that is visible only to ad
 
 ![button for easy initialization!](/screenshots/do-seeding-button.png?raw=true "button for easy seeding")
 
-Use the `\AaronHolbrook\Seeder\doing_seed` action hook to perform logic that you want to manually activate.
+Use the `AaronHolbrook\Seeder\doing_seed` action hook to perform logic that you want to manually activate.
 
 This could be anything such as pre-filling content, auto-creating terms, updating the database in a certain manner, talking to or updating an API, etc.
 
