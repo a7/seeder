@@ -3,9 +3,9 @@
  * Plugin Name: Seeder
  * Description: Perform heavy and/or infrequent actions in a controlled manner
  * Version:     0.1.0
- * Author:      Aaron Holbrook, Josh Levinson, 10up
+ * Author:      Aaron Holbrook, Josh Levinson
  * Author URI:  http://aaronjholbrook
- * License:     MIT
+ * License:     GPLv2
  */
 
 namespace AaronHolbrook\Seeder;

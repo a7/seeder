@@ -6,7 +6,7 @@ Perform heavy and/or infrequent actions in a controlled manner.
 ## Usage
 Initialize seeding by clicking the **Do Seed** button that is visible only to admins/super admins in the activity box in the WP Admin Dashboard
 
-![button for easy initialization!](/screenshots/do-seeding-button.png?raw=true "button for easy seeding")
+![button for easy initialization!](/assets/screenshot-1.png?raw=true "button for easy seeding")
 
 Use the `AaronHolbrook\Seeder\doing_seed` action hook to perform logic that you want to manually activate.
 
