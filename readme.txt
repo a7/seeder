@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Seeder ===
 Contributors: aaronholbrook, joshlevinson
 Tags: seed, infrequent actions, administrator
 Requires at least: 3.3
