@@ -1,7 +1,7 @@
 # Seeder
 
 ## Purpose
-Perform heavy and/or infrequent actions in a controlled manner.
+Perform heavy / infrequent actions in a controlled manner.
 
 ## Usage
 Initialize seeding by clicking the **Do Seed** button that is visible only to admins/super admins in the activity box in the WP Admin Dashboard
