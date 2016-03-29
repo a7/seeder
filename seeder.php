@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Seeder
  * Description: Perform heavy / infrequent actions in a controlled manner
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Aaron Holbrook, Josh Levinson
- * Author URI:  http://aaronjholbrook
+ * Author URI:  http://aaronjholbrook.com
  * License:     GPLv2
  */
 
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // If used in multiple places, only load once
 if ( ! defined( 'AH_SEEDER_VERSION' ) ) {
 
-	define( 'AH_SEEDER_VERSION', '1.0.0' );
+	define( 'AH_SEEDER_VERSION', '1.0.1' );
 	/**
 	 * Seeding controller
 	 * Allow custom activation of seeding by passing true to filter: \AaronHolbrook\Seeder\do_seed
