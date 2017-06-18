@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Seeder
  * Description: Perform heavy / infrequent actions in a controlled manner
- * Version:     1.0.2
+ * Version:     1.0.3
  * Author:      Aaron Holbrook, Josh Levinson
  * Author URI:  http://aaronjholbrook.com
  * License:     GPLv2
