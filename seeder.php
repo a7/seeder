@@ -19,4 +19,6 @@ if ( defined( 'A7_SEEDER_VERSION' ) ) {
 	return;
 }
 
+require_once __DIR__ . '/src/models.php';
+require_once __DIR__ . '/src/admin.php';
 require_once __DIR__ . '/src/main.php';
