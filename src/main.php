@@ -2,8 +2,6 @@
 
 namespace A7\Seeder;
 
-define( 'A7_SEEDER_VERSION', '1.0.1' );
-
 /**
  * Seeding controller
  * Allow custom activation of seeding by passing true to filter: \A7\Seeder\do_seed

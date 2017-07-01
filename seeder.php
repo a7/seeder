@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // If used in multiple places, only load once
-if ( defined( 'A7_SEEDER_VERSION' ) ) {
+if ( function_exists( '\A7\Seeder\do_seeding' ) ) {
 	return;
 }
 

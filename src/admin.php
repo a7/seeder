@@ -2,6 +2,8 @@
 
 namespace A7\Seeder;
 
+use function Zeek\WP_Util\get_user_display_name;
+
 add_action( 'admin_menu', function () {
 	add_submenu_page(
 		'tools.php',
@@ -14,6 +16,17 @@ add_action( 'admin_menu', function () {
 } );
 
 function configuration() {
+
+	$seeds = [
+		[
+			'button'      => 'Seed',
+			'action'      => 'Action Name',
+			'description' => 'Description',
+			'last_run'    => time(),
+			'user'        => 1,
+		],
+	];
+
 	?>
 	<div class="wrap">
 		<h1>Seeder</h1>
@@ -34,28 +47,53 @@ function configuration() {
 					Description
 				</th>
 				<th scope="col" id="date" class="manage-column column-date">
-					Last run
+					Last Run
+				</th>
+				<th scope="col" id="user" class="manage-column column-user">
+					Initiated By
 				</th>
 			</tr>
 			</thead>
 
 			<tbody id="the-list">
-			<tr>
-				<td>
-					<a class="button button-primary" href="#">Seed<a/>
-				</td>
-				<td>
-					<div class="row-title"><strong>Dummy Content</strong>
-				</td>
+				<?php
+				foreach ( $seeds as $seed ) : ?>
+					<tr>
+						<td>
+							<a class="button button-primary" href="#"><?= esc_html( $seed['button'] ); ?></a>
+						</td>
+						<td>
+							<div class="row-title">
+								<strong><?= esc_html( $seed['action'] ); ?></strong>
+							</div>
+						</td>
 
-				<td>
-					Initiate data population with mock content and posts.
-				</td>
+						<td>
+							<?= esc_html( $seed['description'] ); ?>
+						</td>
 
-				<td class="date column-date">
-					<abbr title="2017/01/12 8:29:32 pm">2017/01/12</abbr>
-				</td>
-			</tr>
+						<td class="date column-date">
+							<abbr title="<?= esc_attr( date( 'Y/m/d g:i:s a', $seed['last_run'] ) ); ?>">
+								<?= esc_html( date( 'Y/m/d', $seed['last_run'] ) ); ?>
+							</abbr>
+						</td>
+
+						<td class="user column-user">
+							<?php
+							$user = get_user_by( 'id', $seed['user'] );
+
+							if ( empty( $user->data->display_name ) ) {
+								$user_name = '--';
+							} else {
+								$user_name = $user->data->display_name;
+							}
+
+							echo esc_html( $user_name ); ?>
+						</td>
+					</tr>
+					<?php
+				endforeach; ?>
+
 
 			</tbody>
 
