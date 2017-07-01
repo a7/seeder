@@ -15,15 +15,7 @@ add_action( 'admin_menu', function () {
 
 function configuration() {
 
-	$seeds = [
-		[
-			'button'      => 'Seed',
-			'action'      => 'Action Name',
-			'description' => 'Description',
-			'last_run'    => time(),
-			'user'        => 1,
-		],
-	];
+	$seeds = get_seeds();
 
 	?>
 	<div class="wrap">
@@ -32,28 +24,29 @@ function configuration() {
 			Perform heavy and/or infrequent actions in a controlled manner
 		</p>
 
-		<table class="wp-list-table widefat fixed striped posts">
-			<thead>
-			<tr>
-				<th scope="col" style="width:13%">
-					Initiate
-				</th>
-				<th scope="col" id="action" class="manage-column column-title column-primary">
-					Action
-				</th>
-				<th scope="col" id="description" class="manage-column column-description" style="width: 50%">
-					Description
-				</th>
-				<th scope="col" id="date" class="manage-column column-date">
-					Last Run
-				</th>
-				<th scope="col" id="user" class="manage-column column-user">
-					Initiated By
-				</th>
-			</tr>
-			</thead>
+		<form action="" method="POST">
+			<table class="wp-list-table widefat fixed striped posts">
+				<thead>
+				<tr>
+					<th scope="col" style="width:13%">
+						Initiate
+					</th>
+					<th scope="col" id="action" class="manage-column column-title column-primary">
+						Action
+					</th>
+					<th scope="col" id="description" class="manage-column column-description" style="width: 30%">
+						Description
+					</th>
+					<th scope="col" id="date" class="manage-column column-date">
+						Last Run
+					</th>
+					<th scope="col" id="user" class="manage-column column-user">
+						Initiated By
+					</th>
+				</tr>
+				</thead>
 
-			<tbody id="the-list">
+				<tbody id="the-list">
 				<?php
 				foreach ( $seeds as $seed ) : ?>
 					<tr>
@@ -91,12 +84,9 @@ function configuration() {
 					</tr>
 					<?php
 				endforeach; ?>
-
-
-			</tbody>
-
-
-		</table>
+				</tbody>
+			</table>
+		</form>
 
 	</div>
 
