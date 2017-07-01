@@ -2,8 +2,6 @@
 
 namespace A7\Seeder;
 
-use function Zeek\WP_Util\get_user_display_name;
-
 add_action( 'admin_menu', function () {
 	add_submenu_page(
 		'tools.php',
