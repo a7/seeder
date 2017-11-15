@@ -28,11 +28,11 @@ function configuration() {
 			<table class="wp-list-table widefat fixed striped posts">
 				<thead>
 				<tr>
-					<th scope="col" style="width:13%">
-						Initiate
+					<th scope="col" id="name" class="manage-column column-title column-primary">
+						Seed
 					</th>
-					<th scope="col" id="action" class="manage-column column-title column-primary">
-						Action
+					<th scope="col" id="action-hook" class="manage-column">
+						Action Hook
 					</th>
 					<th scope="col" id="description" class="manage-column column-description" style="width: 30%">
 						Description
@@ -51,11 +51,14 @@ function configuration() {
 				foreach ( $seeds as $seed ) : ?>
 					<tr>
 						<td>
-							<a class="button button-primary" href="#"><?= esc_html( $seed['button'] ); ?></a>
-						</td>
-						<td>
 							<div class="row-title">
-								<strong><?= esc_html( $seed['action'] ); ?></strong>
+								<a class="button button-primary" href="#"><?= esc_html( $seed['name'] ); ?></a>
+							</div>
+						</td>
+
+						<td>
+							<div class="row-action-hook">
+								<code><?= esc_html( $seed['action_hook'] ); ?></code>
 							</div>
 						</td>
 

@@ -11,7 +11,8 @@ function get_seeds() {
 		[
 			'key'         => 'seedtest',
 			'button'      => 'Seed',
-			'action'      => 'Action Name',
+			'name'        => 'Action Name',
+			'action_hook' => 'seeder/action1',
 			'description' => 'Description',
 			'last_run'    => time(),
 			'user'        => 1,
