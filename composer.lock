@@ -1,0 +1,92 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d457b73eef161b53558e5b5d7f24f827",
+    "packages": [
+        {
+            "name": "a7/admin-notices",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/a7/admin-notices.git",
+                "reference": "2b244f0a4bc661aae70b8004661d1fbfc7de83f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/a7/admin-notices/zipball/2b244f0a4bc661aae70b8004661d1fbfc7de83f5",
+                "reference": "2b244f0a4bc661aae70b8004661d1fbfc7de83f5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "load.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "UNLICENSE"
+            ],
+            "authors": [
+                {
+                    "name": "A7",
+                    "email": "a7@fastmail.com",
+                    "homepage": "https://github.com/a7"
+                }
+            ],
+            "description": "Quickly and easily add admin notices to WordPress.",
+            "time": "2017-11-21T20:17:33+00:00"
+        },
+        {
+            "name": "a7/autoload",
+            "version": "2.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/a7/autoload.git",
+                "reference": "ee1d3247d49c4772097e00d0695548bf931192a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/a7/autoload/zipball/ee1d3247d49c4772097e00d0695548bf931192a8",
+                "reference": "ee1d3247d49c4772097e00d0695548bf931192a8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "package.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "UNLICENSE"
+            ],
+            "authors": [
+                {
+                    "name": "A7",
+                    "email": "a7@fastmail.com",
+                    "homepage": "https://github.com/a7"
+                }
+            ],
+            "description": "Automatically and recursively require_once all php files in a given directory.",
+            "time": "2017-07-25T20:04:59+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
