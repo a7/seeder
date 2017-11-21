@@ -1,0 +1,80 @@
+[
+    {
+        "name": "a7/admin-notices",
+        "version": "0.1.0",
+        "version_normalized": "0.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/a7/admin-notices.git",
+            "reference": "2b244f0a4bc661aae70b8004661d1fbfc7de83f5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/a7/admin-notices/zipball/2b244f0a4bc661aae70b8004661d1fbfc7de83f5",
+            "reference": "2b244f0a4bc661aae70b8004661d1fbfc7de83f5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "time": "2017-11-21T20:17:33+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "load.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "UNLICENSE"
+        ],
+        "authors": [
+            {
+                "name": "A7",
+                "email": "a7@fastmail.com",
+                "homepage": "https://github.com/a7"
+            }
+        ],
+        "description": "Quickly and easily add admin notices to WordPress."
+    },
+    {
+        "name": "a7/autoload",
+        "version": "2.0.9",
+        "version_normalized": "2.0.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/a7/autoload.git",
+            "reference": "ee1d3247d49c4772097e00d0695548bf931192a8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/a7/autoload/zipball/ee1d3247d49c4772097e00d0695548bf931192a8",
+            "reference": "ee1d3247d49c4772097e00d0695548bf931192a8",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0"
+        },
+        "time": "2017-07-25T20:04:59+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "package.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "UNLICENSE"
+        ],
+        "authors": [
+            {
+                "name": "A7",
+                "email": "a7@fastmail.com",
+                "homepage": "https://github.com/a7"
+            }
+        ],
+        "description": "Automatically and recursively require_once all php files in a given directory."
+    }
+]

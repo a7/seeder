@@ -13,83 +13,70 @@ add_action( 'admin_menu', function () {
 	);
 } );
 
+/**
+ *
+ */
 function configuration() {
 
 	$seeds = get_seeds();
 
 	?>
+	<style>
+		#seed-list td {
+			vertical-align: bottom;
+		}
+	</style>
 	<div class="wrap">
 		<h1>Seeder</h1>
 		<p>
 			Perform heavy and/or infrequent actions in a controlled manner
 		</p>
 
-		<form action="" method="POST">
-			<table class="wp-list-table widefat fixed striped posts">
-				<thead>
+		<table class="wp-list-table widefat fixed striped posts">
+			<thead>
 				<tr>
 					<th scope="col" id="name" class="manage-column column-title column-primary">
 						Seed
 					</th>
 					<th scope="col" id="action-hook" class="manage-column">
-						Action Hook
+						Function
 					</th>
-					<th scope="col" id="description" class="manage-column column-description" style="width: 30%">
+					<th scope="col" id="description" class="manage-column column-description" style="width: 60%">
 						Description
 					</th>
-					<th scope="col" id="date" class="manage-column column-date">
-						Last Run
-					</th>
-					<th scope="col" id="user" class="manage-column column-user">
-						Initiated By
-					</th>
 				</tr>
-				</thead>
+			</thead>
 
-				<tbody id="the-list">
+			<tbody id="seed-list">
 				<?php
 				foreach ( $seeds as $seed ) : ?>
 					<tr>
 						<td>
 							<div class="row-title">
-								<a class="button button-primary" href="#"><?= esc_html( $seed['name'] ); ?></a>
+								<form action="" method="POST">
+									<input type="hidden" name="seed_key" value="<?= esc_attr( $seed['key'] ); ?>">
+									<?php
+									wp_nonce_field( 'seeder_' . $seed['key'] );
+
+									submit_button( $seed['name'], 'primary', 'submit', false ); ?>
+								</form>
 							</div>
 						</td>
 
 						<td>
-							<div class="row-action-hook">
-								<code><?= esc_html( $seed['action_hook'] ); ?></code>
+							<div class="row-action-hook" style="margin-top: .4rem;">
+								<code><?= esc_html( $seed['callback'] ); ?></code>
 							</div>
 						</td>
 
 						<td>
 							<?= esc_html( $seed['description'] ); ?>
 						</td>
-
-						<td class="date column-date">
-							<abbr title="<?= esc_attr( date( 'Y/m/d g:i:s a', $seed['last_run'] ) ); ?>">
-								<?= esc_html( date( 'Y/m/d', $seed['last_run'] ) ); ?>
-							</abbr>
-						</td>
-
-						<td class="user column-user">
-							<?php
-							$user = get_user_by( 'id', $seed['user'] );
-
-							if ( empty( $user->data->display_name ) ) {
-								$user_name = '--';
-							} else {
-								$user_name = $user->data->display_name;
-							}
-
-							echo esc_html( $user_name ); ?>
-						</td>
 					</tr>
 					<?php
 				endforeach; ?>
-				</tbody>
-			</table>
-		</form>
+			</tbody>
+		</table>
 
 	</div>
 

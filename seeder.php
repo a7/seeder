@@ -10,6 +10,8 @@
 
 namespace A7\Seeder;
 
+use function A7\autoload;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Cannot access pages directly.' );
 }
@@ -19,6 +21,9 @@ if ( function_exists( '\A7\Seeder\do_seeding' ) ) {
 	return;
 }
 
-require_once __DIR__ . '/src/models.php';
-require_once __DIR__ . '/src/admin.php';
-require_once __DIR__ . '/src/main.php';
+/**
+ * Load all the composer packages
+ */
+require_once __DIR__ . '/vendor/autoload.php';
+
+autoload( __DIR__ . '/src' );

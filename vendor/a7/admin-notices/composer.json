@@ -1,0 +1,19 @@
+{
+	"name": "a7/admin-notices",
+	"description": "Quickly and easily add admin notices to WordPress.",
+	"type": "library",
+	"license": "UNLICENSE",
+	"authors": [
+		{
+			"name": "A7",
+			"email": "a7@fastmail.com",
+			"homepage": "https://github.com/a7"
+		}
+	],
+	"require": {
+		"php": ">=5.5.9"
+	},
+	"autoload": {
+		"files": [ "load.php" ]
+	}
+}
