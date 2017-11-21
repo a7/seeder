@@ -4,13 +4,32 @@
 Perform heavy / infrequent actions in a controlled manner.
 
 ## Usage
-Initialize seeding by clicking the **Do Seed** button that is visible only to admins/super admins in the activity box in the WP Admin Dashboard
+Use the `A7\Seeder\add_seed` function to register the seed. 
 
-![button for easy initialization!](/assets/screenshot-1.png?raw=true "button for easy seeding")
+```php
+$seed = [
+		'key'         => 'user_roles',
+		'name'        => 'User Roles',
+		'callback'    => 'Dev\user_roles',
+		'description' => 'Build user roles',
+	];
+```
 
-Use the `AaronHolbrook\Seeder\doing_seed` action hook to perform logic that you want to manually activate.
+This registers the seed with the callback of `Dev\user_roles`. Create a function with that name (in the appropriate namespace) and this will be the function that runs when you initiate the seed.
+
+```php
+
+namespace Dev;
+
+function user_roles() {
+    // .. do some logic ..
+    
+    echo 'Status of the logic...';
+}
+```
+
+Go to Tools -> Seeder and click the corresponding seed button to initialize the callback that you registered.
 
 This could be anything such as pre-filling content, auto-creating terms, updating the database in a certain manner, talking to or updating an API, etc.
 
-## Credit
-Special thanks to [@joshlevinson](https://github.com/joshlevinson) for pioneering the first version of this plugin and for coining the term of `seeding`.
+Anything output during the seed callback will get output in an admin notice.
