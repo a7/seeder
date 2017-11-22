@@ -41,7 +41,7 @@ function configuration() {
 					<th scope="col" id="action-hook" class="manage-column">
 						Function
 					</th>
-					<th scope="col" id="description" class="manage-column column-description" style="width: 60%">
+					<th scope="col" id="description" class="manage-column column-description" style="width: 40%">
 						Description
 					</th>
 				</tr>
