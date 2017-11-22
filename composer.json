@@ -1,7 +1,7 @@
 {
 	"name": "a7/seeder",
 	"description": "Perform heavy and/or infrequent actions in a controlled manner",
-	"type": "package",
+	"type": "library",
 	"require": {
 		"a7/autoload": "^2.0.9",
 		"a7/admin-notices": "^0.1"
