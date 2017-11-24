@@ -38,10 +38,7 @@ function configuration() {
 					<th scope="col" id="name" class="manage-column column-title column-primary">
 						Seed
 					</th>
-					<th scope="col" id="action-hook" class="manage-column">
-						Function
-					</th>
-					<th scope="col" id="description" class="manage-column column-description" style="width: 40%">
+					<th scope="col" id="description" class="manage-column column-description" style="width: 70%">
 						Description
 					</th>
 				</tr>
@@ -54,18 +51,12 @@ function configuration() {
 						<td>
 							<div class="row-title">
 								<form action="" method="POST">
-									<input type="hidden" name="seed_key" value="<?= esc_attr( $seed['key'] ); ?>">
+									<input type="hidden" name="seed_key" value="<?= esc_attr( $seed['name'] ); ?>">
 									<?php
-									wp_nonce_field( 'seeder_' . $seed['key'] );
+									wp_nonce_field( 'seeder_' . $seed['name'] );
 
 									submit_button( $seed['name'], 'primary', 'submit', false ); ?>
 								</form>
-							</div>
-						</td>
-
-						<td>
-							<div class="row-action-hook" style="margin-top: .4rem;">
-								<code><?= esc_html( $seed['callback'] ); ?></code>
 							</div>
 						</td>
 
