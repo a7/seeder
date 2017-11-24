@@ -12,9 +12,11 @@ function seeds( $seed = null ) {
 	if ( empty( $seed ) ) {
 		return $seeds;
 	}
+	
+	$key = sanitize_title( $seed['name'] );
 
-	if ( ! in_array( $seed['key'], $seeds ) ) {
-		$seeds[ $seed['key'] ] = $seed;
+	if ( ! in_array( $key, $seeds ) ) {
+		$seeds[ $key ] = $seed;
 	}
 
 	return $seeds;
