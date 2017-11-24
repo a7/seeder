@@ -32,11 +32,7 @@ add_action( 'admin_init', function() {
 		}
 
 		// Okey dokey, time for seeding!
-		ob_start();
-
-		do_seed( sanitize_title( $_POST['seed_key'] ) );
-
-		$output = ob_get_clean();
+		$output = do_seed( sanitize_title( $_POST['seed_key'] ) );
 
 		add_admin_notice( $output, 'success' );
 	} catch ( \Exception $e ) {
@@ -57,5 +53,5 @@ function do_seed( $seed_key ) {
 		throw new \Exception( 'Invalid callback.' );
 	}
 
-	call_user_func( $seed['callback'] );
+	return call_user_func( $seed['callback'] );
 }
