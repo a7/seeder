@@ -7,12 +7,12 @@ Perform heavy / infrequent actions in a controlled manner.
 Use the `A7\Seeder\add_seed` function to register the seed. 
 
 ```php
-$seed = [
-		'key'         => 'user_roles',
-		'name'        => 'User Roles',
-		'callback'    => 'Dev\user_roles',
-		'description' => 'Build user roles',
-	];
+\A7\Seeder\add_seed( [
+	'key'         => 'user_roles',
+	'name'        => 'User Roles',
+	'callback'    => 'Dev\user_roles',
+	'description' => 'Build user roles',
+] );
 ```
 
 This registers the seed with the callback of `Dev\user_roles`. Create a function with that name (in the appropriate namespace) and this will be the function that runs when you initiate the seed.
