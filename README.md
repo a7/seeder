@@ -46,3 +46,5 @@ Go to Tools -> Seeder and click the corresponding seed button to initialize the 
 This could be anything such as pre-filling content, auto-creating terms, updating the database in a certain manner, talking to or updating an API, etc.
 
 Anything output during the seed callback will get output in an admin notice.
+
+![](http://d.pr/i/KLuOtC/1LEWHDiY+)
