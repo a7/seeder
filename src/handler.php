@@ -2,15 +2,14 @@
 
 namespace A7\Seeder;
 
+use function \A7\Admin_Notices\add_admin_notice;
+
 /**
  * Seeding controller
  * Allow custom activation of seeding by passing true to filter: \A7\Seeder\do_seed
  *
  * Adds button to activity box in dashboard for super admins
  */
-
-use function \A7\Admin_Notices\add_admin_notice;
-
 add_action( 'admin_init', function() {
 
 	// Only allow seeding for admins/super-admins
